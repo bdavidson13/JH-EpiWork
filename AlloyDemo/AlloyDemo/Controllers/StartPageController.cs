@@ -13,7 +13,7 @@ namespace AlloyDemo.Controllers
         public ActionResult Index(StartPage currentPage)
         {
             var model = PageViewModel.Create(currentPage);
-            var profileManger = ServiceLocator.Current.GetInstance(typeof(ProfileManager));
+           // var profileManger = ServiceLocator.Current.GetInstance(typeof(ProfileManager));
 
             if (SiteDefinition.Current.StartPage.CompareToIgnoreWorkID(currentPage.ContentLink)) // Check if it is the StartPage or just a page of the StartPage type.
             {

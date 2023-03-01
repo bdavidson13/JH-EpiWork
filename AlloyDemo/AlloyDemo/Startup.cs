@@ -8,17 +8,43 @@ using Microsoft.Owin.Security.Cookies;
 using Owin;
 using AlloyDemo.Features.RegisterPersonas;
 using AlloyDemo.Features.ResetAdmin;
+using StructureMap;
+using StructureMap.Pipeline;
 
 [assembly: OwinStartup(typeof(AlloyDemo.Startup))]
 
 namespace AlloyDemo
 {
+    public class MyRegistry : Registry
+    {
+        public MyRegistry()
+        {
+            For<Microsoft.AspNetCore.Http.IHttpContextAccessor>().Use<Microsoft.AspNetCore.Http.HttpContextAccessor>().ContainerScoped();
+
+            services.AddSingleton<IProfileManager, ProfileManager>();
+            services.AddSingleton<IProfileStore, ProfileStore>();
+            services.AddTransient<IProfile, DictionaryProfile>();
+
+            if (options != null)
+            {
+                services.Configure<ProfileManagerOptions>(options);
+            }
+
+            services.AddCookieIdProvider();
+
+            return services;
+        }
+    }
     public class Startup
     {
 
         public void Configuration(IAppBuilder app)
         {
-
+            var container = new Container(x =>
+            {
+                x.AddRegistry<MyRegistry>();
+            });
+            StartupExtensions.AddProfileVisitorGroups()
             // Add CMS integration for ASP.NET Identity
             app.AddCmsAspNetIdentity<ApplicationUser>();
 

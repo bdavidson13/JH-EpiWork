@@ -19,10 +19,10 @@ namespace AlloyDemo.Business.Initialization
         public void ConfigureContainer(ServiceConfigurationContext context)
         {
             //Implementations for custom interfaces can be registered here.
+            //context.Services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 
             context.ConfigurationComplete += (o, e) =>
             {
-                context.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
                 //Register custom implementations that should be used in favour of the default implementations
                 context.Services.AddTransient<IContentRenderer, ErrorHandlingContentRenderer>()
                     .AddTransient<ContentAreaRenderer, AlloyContentAreaRenderer>();
