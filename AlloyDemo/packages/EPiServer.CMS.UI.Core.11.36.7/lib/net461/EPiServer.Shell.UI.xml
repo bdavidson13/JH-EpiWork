@@ -1,0 +1,2716 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPiServer.Shell.UI</name>
+    </assembly>
+    <members>
+        <member name="T:EPiServer.Shell.UI.Bootstrapper">
+            <summary>
+            Default bootstrapper
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Bootstrapper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Bootstrapper"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Bootstrapper.#ctor(EPiServer.Shell.ViewComposition.IViewManager,EPiServer.Shell.Modules.ModuleTable,EPiServer.Framework.Web.Resources.IClientResourceService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Bootstrapper"/> class.
+            </summary>
+            <param name="viewManager">The view manager.</param>
+            <param name="modules">The modules.</param>
+            <param name="clientResourceService">The client resource service.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Bootstrapper.BootstrapperViewName">
+            <inheritdoc />
+        </member>
+        <member name="M:EPiServer.Shell.UI.Bootstrapper.CreateViewModel(System.String,System.Web.Mvc.ControllerContext,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiAboutController">
+            <summary>
+            Holds general bout/info screens for the EPiServer products.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiAboutController.EPiServer">
+            <summary>
+            Shows the about view of the EPiServer product
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiDashboardController.#ctor(EPiServer.Shell.Web.Mvc.IBootstrapper)">
+            <summary>
+            Initializes a new instance of the <see cref="!:EPiSleekController"/> class.
+            </summary>
+            <param name="bootstrapper">The bootstrapper.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiDashboardController.Index(System.String)">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiDebugController">
+            <summary>
+            Used internally for debugging purposes
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiDebugController.#ctor(EPiServer.Shell.Modules.ModuleTable,System.Collections.Generic.IEnumerable{EPiServer.Shell.Navigation.IMenuProvider},EPiServer.Framework.Configuration.IConfigurationSource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Controllers.EPiDebugController"/> class.
+            </summary>
+            <param name="moduleManager">The module manager.</param>
+            <param name="menuProviders">The menu providers.</param>
+            <param name="configSource">Instance of IConfigurationSource</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController">
+            <summary>
+            The default shell module controller
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController.#ctor(EPiServer.Shell.Web.Mvc.IBootstrapper,EPiServer.Shell.ViewComposition.IViewManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController"/> class.
+            </summary>
+            <param name="bootstrapper">The bootstrapper.</param>
+            <param name="viewManager">The view manager.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController.Index(EPiServer.Shell.Modules.ShellModule,System.String)">
+            <summary>
+            Returns the result of the view for the module
+            </summary>
+            <param name="module">The shell module</param>
+            <param name="controller">The view name</param>
+            <returns>The view result.</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiLicensingController">
+            <summary>
+            Holds general bout/info screens for the EPiServer products.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiMetadataManagerController">
+            <summary>
+            MVC controller for metadata editor templates.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiMetadataManagerController.#ctor(EPiServer.Shell.ObjectEditing.ExtensibleMetadataProvider)">
+            <summary>
+            Instantiate an instance with an <see cref="T:EPiServer.Shell.ObjectEditing.ExtensibleMetadataProvider"/> object.
+            </summary>
+            <param name="metadataProvider">A metadata provider.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiMetadataManagerController.GetEditorTemplate(System.String)">
+            <summary>
+            Returns an editor template for the given type.
+            </summary>
+            <param name="type">The name of the type.</param>
+            <returns>The editor template.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.Internal.EPiPlatformNavigationController.Get(System.String)">
+            <summary>
+            Gets the current users navigation structure for the specified product.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.Internal.EPiPlatformNavigationSearchProvidersController.Get(System.String)">
+            <summary>
+            Gets the current users navigation structure for the specified product.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.Internal.EPiProductsController.Get">
+            <summary>
+            Gets all availiable products for the current user.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiResourcesController.#ctor(EPiServer.Framework.Localization.LocalizationService)">
+            <summary>
+            Initializes a new instance of the EPiResourcesController class.
+            </summary>
+            <param name="localizationService">The serializer that serializes resources to json.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiResourcesController.#ctor(EPiServer.Framework.Localization.LocalizationService,EPiServer.Shell.Profile.Internal.ICurrentUiCulture)">
+            <summary>
+            Initializes a new instance of the EPiResourcesController class.
+            </summary>
+            <param name="localizationService">The serializer that serializes resources to json.</param>
+            <param name="currentUiCulture">The service that keeps track of current users ui culture.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiResourcesController.DojoResources(System.String)">
+            <summary>
+            Delivers localized resources for dojo modules
+            </summary>
+            <param name="pathInfo">The path info.</param>
+            <returns>The resources in JSON notation</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiResourcesController.GetResourceDictionary(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Transforms the IEnumerable with ResourceItems from GetAllStrings to a Dictionary. The dictionary is needed for serialization to Json.
+            </summary>
+            <param name="resourceKey"></param>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiResourcesController.IsSameCulture(System.Globalization.CultureInfo,System.Globalization.CultureInfo)">
+            <summary>
+            Compares two cultures and returns true if they are same or their parents are same
+            </summary>
+            <param name="left">The cultureinfo instance</param>
+            <param name="right">The cultureinfo instance</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiSearchController">
+            <summary>
+            Controls the search capabilities in episerver shell
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiSearchController.Search(System.String,System.String,EPiServer.Shell.Services.Rest.JsonDictionary)">
+            <summary>
+            Performs a query on a search provider
+            </summary>
+            <param name="id">id of the provider</param>
+            <param name="epiSearchQuery">The epi search query.</param>
+            <param name="parameters">A collection of parameters to the search query.</param>
+            <returns>A List of JSon objects</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiSearchController.Settings">
+            <summary>
+            Returns the settings view
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiSearchController.Save(System.Collections.Generic.IList{EPiServer.Shell.Search.SearchProviderSetting})">
+            <summary>
+            Save the new provider order
+            </summary>
+            <param name="providerSettings">The provider settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiSearchController.GetRouteArea">
+            <summary>
+            Get the current rout area
+            </summary>
+            <returns>Current Area if set, otherwise string.empty</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.EPiSettingsController">
+            <summary>
+            Redirects to the first available settings interface
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.EPiSettingsController.#ctor(EPiServer.Shell.Navigation.MenuAssembler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Controllers.EPiSettingsController"/> class.
+            </summary>
+            <param name="assembler">The assembler used to find menu nodes.</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.PreviewUnavailableController">
+            <summary>
+            Holds messages about preview not being available for various reasons.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.PreviewUnavailableController.Index">
+            <summary>
+            Shows info about not matching protocols
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.PreviewUnavailableController.Timeout">
+            <summary>
+            Shows info about timeout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController">
+            <summary>
+            Visitor Groups Statistics Gadget
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.numberOfPoints">
+            <summary>
+            Number of points in the chart
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.SettingsManager">
+            <summary>
+            Gets or sets the settings manager instance.
+            </summary>
+            <value>The settings manager.</value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.Index(System.Guid)">
+            <summary>
+            Show the Visitor Groups Statistics.
+            </summary>
+            <param name="gadgetID">The gadget ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.Settings(System.Guid)">
+            <summary>
+            Loads the settings for configuration.
+            </summary>
+            <param name="gadgetID">The gadget ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.Settings(System.Guid,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings)">
+            <summary>
+            Validates and saves gadget settings.
+            </summary>
+            <param name="gadgetID">The gadget ID.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.GenerateChart(System.Guid,System.Int32)">
+            <summary>
+            Generates the chart
+            </summary>
+            <param name="gadgetID">The gadget ID.</param>
+            <returns>A <see cref="T:System.Web.Mvc.FileStreamResult"/> of the chart</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.ChangeSettingsOption(System.Guid,System.Int32)">
+            <summary>
+            Changes the settings option.
+            </summary>
+            <param name="gadgetId">The gadget id.</param>
+            <param name="selectedOption">The selected option.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.ChangeSettingsDates(System.Guid,System.DateTime,System.DateTime)">
+            <summary>
+            Changes the settings dates.
+            </summary>
+            <param name="gadgetId">The gadget id.</param>
+            <param name="fromDate">From date.</param>
+            <param name="toDate">To date.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Controllers.VisitorGroupsStatisticsController.OnDeleted(System.Guid)">
+            <summary>
+            Called when gadget is being deleted.
+            </summary>
+            <param name="gadgetID">The gadget ID.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.DojoConfigModifier.#ctor(EPiServer.Shell.Profile.IProfileRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.DojoConfigModifier"/> class.
+            </summary>
+            <param name="profileRepository">The profile repository.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.DojoConfigModifier.#ctor(EPiServer.Shell.Profile.IProfileRepository,System.Func{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.DojoConfigModifier"/> class.
+            </summary>
+            <param name="profileRepository">The profile repository.</param>
+            <param name="userNameResolver">The user name resolver.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.DojoConfigModifier.Initialize">
+            <summary>
+            Initializes this instance, hooking it up to the serializing event of dojo configs.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.DojoConfigModifier.UnInitialize">
+            <summary>
+            Removes the listener to dojo config serializer events.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.DojoConfigModifier.ContextUserNameResolver">
+            <summary>
+            The default user name lookup
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Help">
+            <summary>
+            This class is used to display a button to open the shell help file.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Help.HelpButton(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Gets the html for a shell help button. The help section will be added automatically by appending the controller and action and using ToLower().
+            </summary>
+            <param name="helper">The object this method is attached to.</param>
+            <returns>The html for a shell help button</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Help.HelpButton(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Gets the html for a shell help button.
+            </summary>
+            <param name="helper">The object this method is attached to.</param>
+            <param name="section">The help section that should be opened in the help file.</param>
+            <returns>The html for a shell help button</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Help.GetHelpUrl(System.String)">
+            <summary>
+            Returns the help link for the named module or the EPiServer user guide url if no module name is supplied.
+            </summary>
+            <param name="shellModuleName">Name of a module to get help url for.</param>
+            <returns>The help url or an empty string if no matching module exists</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.FallbackModuleController">
+            <summary>
+            The default implementation of <see cref="T:EPiServer.Shell.Modules.IFallbackModuleController"/> that uses <see cref="T:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController"/>.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.FallbackModuleController.ControllerType">
+            <summary>
+            Returns <see cref="T:EPiServer.Shell.UI.Controllers.EPiDefaultShellModuleController"/>.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Internal.IEventListener">
+            <summary>
+            Interface for for listeners needing to subscibe to events on application startup and unsubscribe when the application stops.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Internal.IEventListener.Start">
+            <summary>
+            Called on application start-up from the <see cref="T:EPiServer.Shell.UI.InitializationModule"/>.  
+            Implement to attach event listeners. 
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Internal.IEventListener.Stop">
+            <summary>
+            Called on application tear-down from the <see cref="T:EPiServer.Shell.UI.InitializationModule"/>.  
+            Implement to detach event listeners. 
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Internal.ManagementOptions">
+            <summary>
+            Provides options for NCD sites
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Internal.ManagementOptions.Domain">
+            <summary>
+            The domain that the management site uses for same origin check.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.ShellMenuProvider">
+            <summary>
+            Provides cross-product top menu items in the episerver shell
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.ShellMenuProvider.UserGuideUrl">
+            <summary>
+            Url to the EPiServer user Guide
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.ShellMenuProvider.GetMenuItems">
+            <summary>
+            Provides the Site Center home section and the CMS settings section.
+            </summary>
+            <returns>
+            A list of <see cref="T:EPiServer.Shell.Navigation.MenuItem"/>s that the provider exposes.
+            </returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.ClientConnection">
+            <summary>
+            Represents a client connected to the <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender"/>.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.ClientConnection.Id">
+            <summary>
+            Unique id of the client connection
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.ClientConnection.User">
+            <summary>
+            Identity of the user connected to the socket
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.ClientConnection.SendAsync(System.String)">
+            <summary>
+            Sends the given message to this client
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.ClientConnectionRegistry">
+            <summary>
+            A collection of connected web socket clients
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessageSender">
+            <summary>
+            Default implementation of <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender"/> for pushing notifications to clients
+            with a WebSocket connection to the current host.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessageSender.SendAllAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage)">
+            <summary>
+            Sends a push message to either all connected clients or to the users given in the message.
+            </summary>
+            <param name="message">The message that should be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the work that is being done</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger">
+            <summary>
+            Default implementation of <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessenger"/> which pushes messages to 
+            locally connected clients. In load balanced environments an event is emitted to
+            publish messages on other hosts.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.Instance">
+            <summary>
+            Implemented to return the same instance to the service locator for both <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessenger"/> and <see cref="T:EPiServer.Shell.UI.Internal.IEventListener"/>
+            </summary>
+            <remarks>
+            Should not be used from code
+            </remarks>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.SendAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage)">
+            <summary>
+            Sends a push message to all connected clients.
+            </summary>
+            <param name="message">The message that should be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the work that is being done</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.SendRemoteEventAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage)">
+            <summary>
+            Sends a push message to all remote hosts using the EPiServer.Events implementation
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.SendLocalAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage)">
+            <summary>
+            Sends a push message to all locally connected clients using the <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender"/>
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.EventRaised(System.Object,EPiServer.Events.EventNotificationEventArgs)">
+            <summary>
+            Called when a push message event is received from the local or a remote host
+            </summary>
+            <param name="sender">The sender instance</param>
+            <param name="e">The event argument containing the message</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.Start">
+            <summary>
+            Subscribe to remote push message events
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultPushMessenger.Stop">
+            <summary>
+            Unsubscribes from remote push message events
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler">
+            <summary>
+            Default <see cref="T:EPiServer.Shell.UI.Messaging.Internal.WebSocketHandler"/> implementation.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler.SendAsync(System.String,System.Guid)">
+            <summary>
+            Sends the message to given client but it tries to send only if the given client id is still present in the connected clients registry
+            </summary>
+            <param name="message">The message</param>
+            <param name="clientId">The client id who is supposed to get this message</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler.SendContext">
+            <summary>
+            Represents the State of the message which is going to travel on the wire.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler.SendContext.#ctor(System.Net.WebSockets.WebSocket,System.String,EPiServer.Shell.UI.Messaging.Internal.ClientConnectionRegistry,System.Guid)">
+            <summary>
+            Initilizes the SendContext
+            </summary>
+            <param name="socket">The WebSocket instance which will be used to send the message.</param>
+            <param name="message">The actual message</param>
+            <param name="connectedClients">The registry of connected clients</param>
+            <param name="clientId">The client id where this message is supposed to go.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler.SendContext.IsClientConnected">
+            <summary>
+            Gets the value which indicates that the client (where this message is supposed to go) is still connected or not
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.IClient">
+            <summary>
+            Represents a client connected to the messaging socket.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.IClient.Id">
+            <summary>
+            Gets the identifier of this <see cref="T:EPiServer.Shell.UI.Messaging.Internal.IClient"/>.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.IClient.User">
+            <summary>
+            Gets the user connected with this <see cref="T:EPiServer.Shell.UI.Messaging.Internal.IClient"/>.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.PushMessage">
+            <summary>
+            Represents a message that can be sent to a UI client connected using push methods.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.PushMessage.Topic">
+            <summary>
+            A message topic identifying the message
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.PushMessage.Data">
+            <summary>
+            The message payload sent to the client
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.PushMessage.Recipients">
+            <summary>
+            Gets the Usernames for those who are supposed to receive this message. By default when no user is given, the message goes to all connected clients.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageHandler">
+            <summary>
+            <see cref="T:System.Web.IHttpHandler"/> that manages websocket requests and pushes messages to the CMS client UI.
+            Registered in the routing machinery from the <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageRouteHandler"/>.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageRouteHandler">
+            <summary>
+            A route handler which always returns a new <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageHandler"/>
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender">
+            <summary>
+            Message sender for pushing messages to clients with a WebSocket connection to the current host.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender.Clients">
+            <summary>
+            Gets a list of all currently connected clients.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender.SendAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage,EPiServer.Shell.UI.Messaging.Internal.IClient)">
+            <summary>
+            Sends a push message to the provided client.
+            </summary>
+            <param name="message">The message that should be sent.</param>
+            <param name="client">The client that should receive the message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the work that is being done</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender.SendAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage,System.Func{EPiServer.Shell.UI.Messaging.Internal.IClient,System.Boolean})">
+            <summary>
+            Sends a push message to all clients that meet the criteria provided.
+            </summary>
+            <param name="message">The message that should be sent.</param>
+            <param name="predicate">The predicate that decides which clients that should receive the message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the work that is being done</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.PushMessageSender.SendAllAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage)">
+            <summary>
+            Sends a push message to the all currently connected clients.
+            </summary>
+            <param name="message">The message that should be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the work that is being done</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.PushMessenger">
+            <summary>
+            Messenger used for pushing messages to connected clients both locally and on other hosts in load balanced environments.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Messaging.Internal.PushMessenger.SendAsync(EPiServer.Shell.UI.Messaging.Internal.PushMessage)">
+            <summary>
+            Sends a push message to all connected clients.
+            </summary>
+            <param name="message">The message that should be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the work that is being done</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.RemoteMessageSerializer">
+            <summary>
+            Used for serializing messages to JSON (with type information) when sending push 
+            messages between servers in load balanced environments.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.RemotePushMessage">
+            <summary>
+            Model for sending remote push events using WCF
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Messaging.Internal.RemotePushMessage.Data">
+            <summary>
+            The serialized data sent to remote hosts
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Messaging.Internal.WebSocketHandler">
+            <summary>
+            Internal abstraction for handling incoming web socket requests.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.ComponentColumnDefinition">
+            <summary>
+            Describes the component-column relation
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentColumnDefinition.Id">
+            <summary>
+            The id of the component
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentColumnDefinition.Column">
+            <summary>
+            The column the component is in
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.ComponentSortOrderViewModel">
+            <summary>
+            View model for re-sorting components
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentSortOrderViewModel.ViewName">
+            <summary>
+            Name of the parent view
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentSortOrderViewModel.Id">
+            <summary>
+            Id of the parent container
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentSortOrderViewModel.Components">
+            <summary>
+            Collection of <see cref="T:EPiServer.Shell.UI.Models.ComponentColumnDefinition" /> objects. Their
+            order describe the sort order
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.ComponentViewModel">
+            <summary>
+            View model for administrating components.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.ComponentViewModel.#ctor(EPiServer.Shell.ViewComposition.IComponent,System.String)">
+            <summary>
+            Overloaded constructor for use when there is no parent component
+            </summary>
+            <param name="component"></param>
+            <param name="viewName"></param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.ComponentViewModel.#ctor(EPiServer.Shell.ViewComposition.IComponent,System.String,System.Nullable{System.Guid})">
+            <summary>
+            Creates a view model with its properties set from the provided <see cref="T:EPiServer.Shell.ViewComposition.IComponent"/>
+            and the provided view name and parent id
+            </summary>
+            <param name="component">The component to copy values from</param>
+            <param name="viewName">View name to set</param>
+            <param name="parentId">Parent id to set</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.ViewName">
+            <summary>
+            The name (path) to the view containing the component
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.ParentId">
+            <summary>
+            The ID of the parent container
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.Settings">
+            <summary>
+            Gets the settings collection for this component. Used for client activation and persisted on the server.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.DefinitionName">
+            <summary>
+            Unique name of the component type.  
+            </summary>
+            <value>The unique name that is used to create new <see cref="T:EPiServer.Shell.ViewComposition.IComponent"/>s from the <see cref="T:EPiServer.Shell.ViewComposition.IComponentProvider"/>s.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.WidgetType">
+            <summary>
+            Gets the widget type used when displaying the component.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.ModuleName">
+            <summary>
+            Gets the name of the Shell module to which the component belongs to.
+            </summary>
+            <value>
+            The name of the Shell module.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.ComponentViewModel.SortOrder">
+            <summary>
+            Gets or sets the sort order for this component.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.ComponentViewModel.ApplyChanges(EPiServer.Shell.ViewComposition.IComponent)">
+            <summary>
+            Updates the SortOrder and Settings properties of the provided <see cref="T:EPiServer.Shell.ViewComposition.IComponent"/>
+            with values from the <see cref="T:EPiServer.Shell.UI.Models.ComponentViewModel"/> instance, replacing any
+            existing values.
+            </summary>
+            <param name="destination"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.DashboardViewModel.#ctor(EPiServer.Framework.Localization.LocalizationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.DashboardViewModel"/> class.
+            </summary>
+            <param name="localizationService">The localization service used for getting localized resources.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.DashboardViewModel.RootContainer">
+            <summary>
+            Gets the root <see cref="T:EPiServer.Shell.ViewComposition.IContainer"/> that contains the different panels for the view.
+            </summary>
+            <value>The container.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.DashboardViewModel.Name">
+            <summary>
+            Gets the name of the view. Used or finding views.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.DashboardViewModel.CreateView">
+            <summary>
+            Creates a new instance of the view.
+            </summary>
+            <returns>A new instance of the view.</returns>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.DashboardViewModel.Title">
+            <summary>
+            Gets a localized title for this view
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.DojoResourceIdentifier">
+            <summary>
+            Identifies a dojo localization resource
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.DojoResourceIdentifier.Culture">
+            <summary>
+            Preffered culture of the requested resource
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.DojoResourceIdentifier.ResourceKey">
+            <summary>
+            Name of the requested dojo resource
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.DojoResourceIdentifier.DojoModule">
+            <summary>
+            Name of the dojo module requesting the resource
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.DojoResourceIdentifier.Parse(System.String)">
+            <summary>
+            Parses a request path on the format some/module/nls/[sv-se]/resource.identifier.js into a dojo resource identifier. 
+            </summary>
+            <param name="pathInfo">The path to parse</param>
+            <returns>An identifier describing the requested resource if the path was successfully parsed; otherwise null.</returns>
+            <exception cref="T:System.ArgumentException">if cultureinfo path segment is not a valid supported culture name.</exception>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.GroupSettingsViewModel.SetLocalizedTitle(System.String,System.String,EPiServer.Framework.Localization.LocalizationService)">
+            <summary>
+            Sets the title with the following priority:
+            1. Localized string.
+            2. Title.
+            3. Name.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.GroupSettingsViewModel.Title">
+            <summary>
+            Gets or sets the localized title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.GroupSettingsViewModel.DisplayUI">
+            <summary>
+            States if the group will be shown on the UI.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.GroupSettingsViewModel.DisplayOrder">
+            <summary>
+            Gets or sets the display order.
+            </summary>
+            <value>
+            The display order.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.GroupSettingsViewModel.Name">
+            <summary>
+            Gets or sets the name that is used as an identifier for the group.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.GroupSettingsViewModel.UiType">
+            <summary>
+            Gets or sets the client class used to layout the property group, usually a DOJO widget.
+            </summary>
+            <value>The client side layout class.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.GroupSettingsViewModel.Options">
+            <summary>
+            Gets or sets the options.
+            </summary>
+            <value>
+            The options.
+            </value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.MessageViewModel">
+            <summary>
+            Model for sending alert messages back to client
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MessageViewModel.Message">
+            <summary>
+            The message shown in an alert dialog
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MessageViewModel.AdditionalInformation">
+            <summary>
+            The message to show in an alert dialog.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.MetadataStoreModel">
+            <summary>
+            Used for serializing only the information needed to send to the client.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.MetadataStoreModel.#ctor">
+            <summary>
+            Create new instance of <see cref="T:EPiServer.Shell.UI.Models.MetadataStoreModel"/>
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.ModelType">
+            <summary>
+            Gets or sets the model type
+            </summary>
+            <value>The model type</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.ShowForEdit">
+            <summary>
+            Gets or sets the show for edit.
+            </summary>
+            <value>
+            The show for edit.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.UiType">
+            <summary>
+            Gets or sets the type of the UI.
+            </summary>
+            <value>The type of the UI.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.UiPackage">
+            <summary>
+            Gets or sets the UI package.
+            </summary>
+            <value>
+            The UI package.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.CustomEditorSettings">
+            <summary>
+            Gets or sets the custom editor settings.
+            </summary>
+            <value>The custom editor settings.</value>
+            <remarks>This might include information about custom editor wrappers.</remarks>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.LayoutType">
+            <summary>
+            Gets or sets the type of the layout.
+            </summary>
+            <value>
+            The type of the layout.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.InitialValue">
+            <summary>
+            Gets or sets the initial value.
+            </summary>
+            <value>
+            The initial value.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.DisplayName">
+            <summary>
+            Gets or sets the display name
+            </summary>
+            <value>The display name</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.GroupName">
+            <summary>
+            Gets or sets the name of the group.
+            </summary>
+            <value>
+            The name of the group.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.DisplayOrder">
+            <summary>
+            Gets or sets the display order.
+            </summary>
+            <value>
+            The display order.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.Settings">
+            <summary>
+            Gets or sets the editor settings, which are used to initialize the client editor.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.OverlaySettings">
+            <summary>
+            Gets or sets the overlay settings, which are used to initialize the client overlay.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.AdditionalValues">
+            <summary>
+            Model metadata's additional values. These values are sent to client for customization purposes. They are not used as the editor's settings.
+            </summary>
+            <value>
+            The additional values.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.MappedProperties">
+            <summary>
+            Gets the mapping of property names.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.Groups">
+            <summary>
+            Gets or sets the detailed information about property groups.
+            </summary>
+            <value>The property group information.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.MetadataStoreModel.Selections">
+            <summary>
+            Gets the selections.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.SearchProviderViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchProviderViewModel.Id">
+            <summary>
+            Gets the Id for the SearchProvider
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchProviderViewModel.Category">
+            <summary>
+            Gets the category for the provider
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchResultModel.ProviderId">
+            <summary>
+            Gets or sets the id of the provider to search.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchResultModel.SearchQuery">
+            <summary>
+            Gets or sets the search query.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchResultModel.SearchRoots">
+            <summary>
+            Gets or sets the search roots.
+            </summary>
+            <remarks>An optional comma separated list of roots that should be used when searching.</remarks>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchResultModel.FilterOnCulture">
+            <summary>
+            Gets or sets a value indicating whether the search results should filter on culture.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.SearchResultModel.Parameters">
+            <summary>
+            Gets or sets a collection of additional parameters to the search query.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.IndexViewData">
+            <summary>
+            View data for Index view
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.IndexViewData.GadgetID">
+            <summary>
+            Gets or sets the gadget ID.
+            </summary>
+            <value>The gadget ID.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.IndexViewData.Settings">
+            <summary>
+            Gets or sets the settings.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.IndexViewData.StatisticResult">
+            <summary>
+            Gets or sets the statistic result.
+            </summary>
+            <value>The statistic result.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings">
+            <summary>
+            Data transfer object which maintains settings for Visitor Groups Statistics gadget
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.Id">
+            <summary>
+            Id of settings
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.GadgetId">
+            <summary>
+            ID of gadget to maintain
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.ViewStatisticSettings">
+            <summary>
+            Gets or sets the view statistic settings.
+            </summary>
+            <value>The view statistic settings.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.SelectedView">
+            <summary>
+            Gets or sets the selected view.
+            </summary>
+            <value>The selected view.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.AllVisitorGroups">
+            <summary>
+            All visitor groups in the system. This property will not be stored in the repository
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.AllStatisticViews">
+            <summary>
+            All the statistic views in the system
+            </summary>
+            <value>All statistic views.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings.JqueryShortDatePattern">
+            <summary>
+            Gets the date pattern.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager">
+            <summary>
+            Manager for Visitor Groups Statistics settings
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.#ctor(EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Framework.Localization.LocalizationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.#ctor(EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Framework.Localization.LocalizationService,EPiServer.Personalization.VisitorGroups.IVisitorGroupEvents,EPiServer.Framework.Configuration.EPiServerFrameworkSection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.#ctor(EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Framework.Localization.LocalizationService,EPiServer.Personalization.VisitorGroups.IVisitorGroupEvents,EPiServer.Framework.Configuration.EPiServerFrameworkSection,EPiServer.Personalization.VisitorGroups.IVisitorGroupsStatisticsLoggerRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager"/> class.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.StoreFactory">
+            <summary>
+            Data store factory
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.SettingsStore">
+            <summary>
+            Storage for setttings
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.VisitorGroupStore">
+            <summary>
+            Repository for the visitor groups
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.LocalizationService">
+            <summary>
+            The service used for localizations.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.IsValid(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings,System.Collections.Generic.IDictionary{System.String,System.String}@)">
+            <summary>
+            Validates settings before save
+            </summary>
+            <param name="settings">Settings object to validate</param>
+            <param name="errors">List of errors</param>
+            <returns>If validation was successfull</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.Save(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings)">
+            <summary>
+            Save settings for the gadget
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.Load(System.Guid,System.Boolean)">
+            <summary>
+            Load settings for the gadget
+            </summary>
+            <param name="gadgetId">Gadget ID</param>
+            <param name="useVisitorGroupCache">if set to <c>true</c> visitor groups will be received from cache, if they exist in cache.</param>
+            <returns>
+            Setting for the gadget from storage or default ones
+            </returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.Delete(System.Guid)">
+            <summary>
+            Deletes settings for the gadget
+            </summary>
+            <param name="gadgetId">Id of the gadget</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetStatistic(System.String,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting)">
+            <summary>
+            Gets a statistic view with a specific name.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetAllStatisticViews(System.String)">
+            <summary>
+            Gets all statistic views.
+            </summary>
+            <param name="selectedView">The selected view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetVisitorGroups(System.Boolean)">
+            <summary>
+            Gets visitor groups from the visitor group store.
+            </summary>
+            <param name="useVisitorGroupCache">if set to <c>true</c> visitor groups will be received from cache, if they exist in cache.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetTranslatedView(System.String)">
+            <summary>
+            Gets the translated view.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetSetting(System.String)">
+            <summary>
+            Gets the setting.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetStatistics(System.String,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting)">
+            <summary>
+            Gets the statistics.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetChartDetails(System.String)">
+            <summary>
+            Gets the chart details.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.AddStatisticToCache(System.String,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisitcViewResult)">
+            <summary>
+            Adds the statistic to cache.
+            </summary>
+            <param name="cacheKey">The cache key.</param>
+            <param name="statisticsResult">The statistics result.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.RemoveStatisticsFromCache(System.String)">
+            <summary>
+            Removes the statistics from cache.
+            </summary>
+            <param name="cacheKey">The cache key.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.RemoveAllStatisticsFromCache">
+            <summary>
+            Removes all statistics from cache.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetViewNames">
+            <summary>
+            For internal use only
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.LoadById(System.Guid,System.Boolean)">
+            <summary>
+            Loads settings by gadget id
+            </summary>
+            <param name="gadgetId">Id of the gadget</param>
+            <param name="useVisitorGroupCache">if set to <c>true</c> [use visitor group cache].</param>
+            <returns>Settings object</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.SettingsManager.GetDefault(System.Guid)">
+            <summary>
+            Default settings for the gadget
+            <param name="gadgetId">ID of the gadget</param>
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.Delete(System.Guid)">
+            <summary>
+            Deletes settings for the gadget
+            </summary>
+            <param name="gadgetId">Id of the gadget</param>
+            <param name="viewStatistic">The view statistic.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.IsValid(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings,System.Collections.Generic.IDictionary{System.String,System.String}@)">
+            <summary>
+            Validates settings before save
+            </summary>
+            <param name="settings">Settings object to validate</param>
+            <param name="errors">List of errors</param>
+            <returns>If validation was successfull</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.Load(System.Guid,System.Boolean)">
+            <summary>
+            Load settings for the gadget
+            </summary>
+            <param name="gadgetId">Gadget ID</param>
+            <param name="useVisitorGroupCache">if set to <c>true</c> visitor groups will be received from cache, if they exist in cache.</param>
+            <returns>
+            Setting for the gadget from storage or default ones
+            </returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.GetTranslatedView(System.String)">
+            <summary>
+            Gets the translated view.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.GetSetting(System.String)">
+            <summary>
+            Gets the setting.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.GetStatistics(System.String,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting)">
+            <summary>
+            Gets the statistics.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.GetChartDetails(System.String)">
+            <summary>
+            Gets the chart details.
+            </summary>
+            <param name="viewName">Name of the view.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.GetAllStatisticViews(System.String)">
+            <summary>
+            Gets all statistic views.
+            </summary>
+            <param name="selectedView">The selected view.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.Save(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Settings)">
+            <summary>
+            Save settings for the gadget
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.GetVisitorGroups(System.Boolean)">
+            <summary>
+            Gets visitor groups from the visitor group store.
+            </summary>
+            <param name="useVisitorGroupCache">if set to <c>true</c> visitor groups will be received from cache, if they exist in cache.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.AddStatisticToCache(System.String,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisitcViewResult)">
+            <summary>
+            Adds the statistic to cache.
+            </summary>
+            <param name="cacheKey">The cache key.</param>
+            <param name="statisticsResult">The statistics result.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.RemoveStatisticsFromCache(System.String)">
+            <summary>
+            Removes the statistics from cache.
+            </summary>
+            <param name="cacheKey">The cache key.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.ISettingsManager.RemoveAllStatisticsFromCache">
+            <summary>
+            Removes all statistics from cache.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView">
+            <summary>
+            Statistic view for visits / day for each visitor group
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:VisitorGroupVisitsEachDayView"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.#ctor(EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="!:VisitorGroupVisitsEachDayView" /> class.
+            </summary>
+            <param name="storeFactory">The store factory.</param>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.GetStatistics(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting)">
+            <summary>
+            Gets the statistics.
+            </summary>
+            <param name="statisticSetting">The statistic setting.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.DefaultSettings">
+            <summary>
+            Gets the settings.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.Chart">
+            <summary>
+            Gets the Column chart
+            </summary>
+            <value>Column</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.XValueType">
+            <summary>
+            Gets a DateTime as the X value.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.YValueType">
+            <summary>
+            Gets an Int32 as the Y value.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.FormatKey(System.Object)">
+            <summary>
+            Formats the key to short date string.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.FormatValue(System.Object)">
+            <summary>
+            Formats the value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.Properties">
+            <summary>
+            Gets an empty property dictionary.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.LegendText">
+            <summary>
+            Returns null, to show default value.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsColumnView.LedgendDocking">
+            <summary>
+            Gets the 'top' ledgend docking.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsLineView">
+            <summary>
+            Line view for visitor group statistics
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsLineView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsLineView.#ctor(EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView" /> class.
+            </summary>
+            <param name="storeFactory">The store factory.</param>
+            <param name="visitorGroupRepository"></param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsLineView.Chart">
+            <summary>
+            Gets the Line Column chart
+            </summary>
+            <value>Column</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupAggregatedVisitsLineView.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView">
+            <summary>
+            Statistic view for total visits for each visitor group
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.#ctor(EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView"/> class.
+            </summary>
+            <param name="storeFactory">The store factory.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.Chart">
+            <summary>
+            Gets the Pie chart
+            </summary>
+            <value>Column</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.XValueType">
+            <summary>
+            Gets a string as the X value.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.FormatKey(System.Object)">
+            <summary>
+            Formats the key to a visitor group name
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.Properties">
+            <summary>
+            Gets a property collection containing 'PieLabelStyle'.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.LegendText">
+            <summary>
+            Gets the legend text in form of 'x-value: y-value (procent)'.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.LedgendDocking">
+            <summary>
+            Gets the 'left' ledgend docking.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.DefaultSettings">
+            <summary>
+            Gets the settings.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupTotalVisitsView.GetStatistics(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting)">
+            <summary>
+            Gets the statistics.
+            </summary>
+            <param name="statisticSetting">The statistic setting.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository">
+            <summary>
+            A repository used to handle visitor group statisitics
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository.#ctor">
+            <summary>
+            Constructs a visitor group statistic repository using the current data store factory instance.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository.#ctor(EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Constructs a visitor group statistic repository.
+            </summary>
+            <param name="storeFactory">The store factory used to create stores.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository.#ctor(EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,System.Nullable{System.DateTime})">
+            <summary>
+            Constructs a visitor group statistic repository.
+            </summary>
+            <param name="storeFactory">The store factory used to create stores.</param>
+            <param name="date">The date to store items with.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository.#ctor(EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,EPiServer.Personalization.VisitorGroups.IVisitorGroupsStatisticsLoggerRegistry,System.Nullable{System.DateTime})">
+            <summary>
+            Constructs a visitor group statistic repository.
+            </summary>
+            <param name="storeFactory">The store factory used to create stores.</param>
+            <param name="date">The date to store items with.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository.CommitMemoryToRepository(System.Collections.Generic.IDictionary{EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupDate,System.Int32})">
+            <summary>
+            Saves number of hits for the specified visitor group id.
+            </summary>
+            <param name="statisticInMemory">The statistic in memory.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitsStatisticRepository.SaveToMemory(System.Guid,EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupDate,System.Collections.Generic.IDictionary{EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupDate,System.Int32},System.Web.HttpContextBase)">
+            <summary>
+            Adds the statistic to list.
+            </summary>
+            <param name="visitorGroupId">The identity.</param>
+            <param name="statisticsInMemory">The statistics in memory.</param>
+            <param name="httpContext">HttpContextBase object.</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitStatisticModel">
+            <summary>
+            Statistics for visitor groups
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitStatisticModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:VisitorGroupStatistic"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitStatisticModel.#ctor(System.Guid,System.String,System.DateTime,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="!:VisitorGroupStatistic"/> class.
+            </summary>
+            <param name="visitorGroupId">The visitor group id.</param>
+            <param name="machineName">Name of the machine.</param>
+            <param name="date">The date.</param>
+            <param name="hits">The hits.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitStatisticModel.StatisticDate">
+            <summary>
+            Gets or sets the date.
+            </summary>
+            <value>The date.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.Implementation.VisitorGroupVisitStatisticModel.Visits">
+            <summary>
+            Gets or sets the number of hits.
+            </summary>
+            <value>The hits.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupRepositoryExtensions">
+            <summary>
+            Extensionmethods for visitor group used by visitor group statistics
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupRepositoryExtensions.List(EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,System.Boolean)">
+            <summary>
+            Lists visitor groups.
+            </summary>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+            <param name="useVisitorGroupCache">if set to <c>true</c>, visitor groups will be received from cache</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupRepositoryExtensions.GetVisitorGroupName(EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,System.Guid)">
+            <summary>
+            Gets the name of a visitor group.
+            </summary>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+            <param name="visitorGroupIdentity">The visitor group identity.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting">
+            <summary>
+            Settings class for visitor group statistics
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting.Id">
+            <summary>
+            For internal use only
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting.VisitorGroupIdentities">
+            <summary>
+            For internal use only
+            </summary>
+            <value>The identities.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting.DisplayText">
+            <summary>
+            For internal use only
+            </summary>
+            <value>The display text.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting.Options">
+            <summary>
+            Gets or sets the statistic setting options.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting.SelectedOptionIndex">
+            <summary>
+            Gets or sets the selected statistic setting
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingTimeSpan">
+            <summary>
+            Time span for visitor group statistic setting
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingTimeSpan.Day">
+            <summary>
+            Aggregate on day
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingTimeSpan.Month">
+            <summary>
+            Aggregate on month
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingTimeSpan.Year">
+            <summary>
+            Aggregate on year
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingTimeSpan.Total">
+            <summary>
+            All
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingDate">
+            <summary>
+            Date Settings class for visitor group statistics
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingDate.FromDate">
+            <summary>
+            Gets or sets from date.
+            </summary>
+            <value>From date.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingDate.ToDate">
+            <summary>
+            Gets or sets to date.
+            </summary>
+            <value>To date.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingDate.SelectedOption">
+            <summary>
+            Gets the selected option.
+            </summary>
+            <value>The selected option.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSettingDate.DisplayText">
+            <summary>
+            For internal use only
+            </summary>
+            <value>The display text.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer">
+            <summary>
+            Class containing visitor group statistic views
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer.#ctor(EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer"/> class.
+            </summary>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer.Instance">
+            <summary>
+            Gets the instance.
+            </summary>
+            <value>The instance.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticViewer.StatisticViews">
+            <summary>
+            Gets the statistic views.
+            </summary>
+            <value>The statistic views.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.ChartType">
+            <summary>
+            Type of chart
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.ChartType.Line">
+            <summary>
+            Line chart
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.ChartType.Column">
+            <summary>
+            Column chart
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.ChartType.Pie">
+            <summary>
+            Pie chart
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.LedgendDocking">
+            <summary>
+            How ledgend should be docked
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.LedgendDocking.Top">
+            <summary>
+            At the top of the chart
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.LedgendDocking.Right">
+            <summary>
+            At the right to the chart
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.LedgendDocking.Bottom">
+            <summary>
+            At the bottom of the chart
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.LedgendDocking.Left">
+            <summary>
+            At the left of the chart
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails">
+            <summary>
+            For internal use only
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.Chart">
+            <summary>
+            For internal use only
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.XValueType">
+            <summary>
+            For internal use only
+            </summary>
+            <value>The type of the X value.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.YValueType">
+            <summary>
+            For internal use only
+            </summary>
+            <value>The type of the Y value.</value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.FormatKey(System.Object)">
+            <summary>
+            For internal use only
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.FormatValue(System.Object)">
+            <summary>
+            For internal use only
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.Properties">
+            <summary>
+            Gets custom properties.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.LegendText">
+            <summary>
+            Gets the legend text.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticChartDetails.LedgendDocking">
+            <summary>
+            Gets the ledgend docking.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticModel">
+            <summary>
+            Interface for visitor group statistic models
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticModel.VisitorGroupId">
+            <summary>
+            Gets or sets the visitor group id.
+            </summary>
+            <value>The visitor group id.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticModel.MachineName">
+            <summary>
+            Gets or sets the name of the machine.
+            </summary>
+            <value>The name of the machine.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticView">
+            <summary>
+            Interface for visitor group statistic views
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticView.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticView.GetStatistics(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticSetting)">
+            <summary>
+            Gets the statistics.
+            </summary>
+            <param name="statisticSetting">The statistic setting.</param>
+            <returns></returns>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisticView.DefaultSettings">
+            <summary>
+            Gets the default settings.
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisitcViewResult">
+            <summary>
+            Interface for Visitor group statisitc view result
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.IVisitorGroupStatisitcViewResult.Items">
+            <summary>
+            Result items
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResult`2">
+            <summary>
+            Visitor group statisitc view result
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResult`2.#ctor">
+            <summary>
+            For internal use only
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResult`2.Add(EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem{`0,`1})">
+            <summary>
+            For internal use only
+            </summary>
+            <param name="statisticViewResultItem">The statistic view result item.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResult`2.Get(System.Guid)">
+            <summary>
+            For internal use only
+            </summary>
+            <param name="identity">The identity.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResult`2.Items">
+            <summary>
+            For internal use only
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem">
+            <summary>
+            Visistor group statistic view result item
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem.#ctor(System.Guid,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem"/> class.
+            </summary>
+            <param name="identity">The identity.</param>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem.Statistics">
+            <summary>
+            Gets a dictionary containing statistics
+            </summary>
+            <value>The statistics.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem.Identity">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem.Name">
+            <summary>
+            Gets the name of the visitor group.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem`2">
+            <summary>
+            Visitor group statistic view result item
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem`2.#ctor(System.Guid,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="!:StatisticResult&lt;T&gt;"/> class.
+            </summary>
+            <param name="identity">The identifier.</param>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem`2.#ctor(System.Guid,EPiServer.Personalization.VisitorGroups.IVisitorGroupRepository,System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="!:StatisticResult&lt;T&gt;"/> class.
+            </summary>
+            <param name="identity">The identity.</param>
+            <param name="visitorGroupRepository">The visitor group repository.</param>
+            <param name="statistics">Dictionary containing keys and specific value.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem`2.Statistics">
+            <summary>
+            Gets a dictionary containing statistics
+            </summary>
+            <value>The statistics.</value>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisitcViewResultItem`2.Add(`0,`1)">
+            <summary>
+            Add statistic
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase">
+            <summary>
+            Base class for Visitor group statistic models
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase"/> class.
+            </summary>
+            <param name="visitorGroupId">The visitor group id.</param>
+            <param name="machineName">Name of the machine.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase.Id">
+            <summary>
+            The <see cref="!:Identity"/> of the item
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase.VisitorGroupId">
+            <summary>
+            Gets or sets the visitor group id.
+            </summary>
+            <value>The visitor group id.</value>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticModelBase.MachineName">
+            <summary>
+            Gets or sets the name of the machine.
+            </summary>
+            <value>The name of the machine.</value>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3">
+            <summary>
+            Base class for Statistic stores
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.#ctor(System.Collections.Generic.IEqualityComparer{`0},EPiServer.Data.Dynamic.DynamicDataStoreFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="!:VisitorGroupStatisticStoreBase&lt;TKey, TValue&gt;"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.#ctor(System.Collections.Generic.IEqualityComparer{`0},EPiServer.Data.Dynamic.DynamicDataStoreFactory,EPiServer.Personalization.VisitorGroups.IVisitorGroupsStatisticsLoggerRegistry)">
+            <summary>
+            Initializes a new instance of the <see cref="!:VisitorGroupStatisticStoreBase&lt;TKey, TValue&gt;"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.AddStatistic(System.Guid,System.Web.HttpContextBase)">
+            <summary>
+            Add statistic to memory
+            </summary>
+            <param name="identity">The identity.</param>
+            <param name="httpContext">The HTTP context.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.DeleteStatistics(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Deletes the statistics for specific identities.
+            </summary>
+            <param name="identities">The identities to delete statistic for.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.AddSession(System.Guid,System.Web.HttpContextBase,System.String)">
+            <summary>
+            Tries to add id to session
+            </summary>
+            <param name="identity">The identity.</param>
+            <param name="httpContext">The HTTP context.</param>
+            <returns>True if it did not exist before in the session</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.SaveToMemory(System.Guid,`0,System.Collections.Generic.IDictionary{`0,`1},System.Web.HttpContextBase)">
+            <summary>
+            Add statistics to list
+            </summary>
+            <param name="visitorGroupId">The identifier.</param>
+            <param name="key">The key.</param>
+            <param name="statisticList">A list containing statistics items.</param>
+            <param name="httpContext">The HTTP context.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Models.VisitorGroupsStatistics.Statistics.VisitorGroupStatisticRepositoryBase`3.CommitMemoryToRepository(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Saves statistic.
+            </summary>
+            <param name="statisticsInMemory">Statistics that shoulb be Commit to repository</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.IMetadataStoreModelCreator">
+            <summary>
+            Interface of the metadta store's model creator
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.IMetadataStoreModelCreator.Create(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Creates the metadata store model.
+            </summary>
+            <param name="metadata">The metadata.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ComponentCategoryStore.#ctor(EPiServer.Shell.ViewComposition.IComponentManager,EPiServer.Shell.UI.Rest.Translator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.ComponentCategoryStore" /> class.
+            </summary>
+            <param name="componentManager">The component manager.</param>
+            <param name="translator">The translator.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ComponentCategoryStore.Get(System.String,EPiServer.Shell.Services.Rest.ItemRange)">
+            <summary>
+            Get a list of categories.
+            </summary>
+            <param name="id">Category Id</param>
+            <param name="range">Range http header on incoming requests.</param>
+            <returns>A result object which serializes a list of category names.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ComponentDefinitionStore.#ctor(EPiServer.Shell.ViewComposition.IComponentManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.ComponentDefinitionStore" /> class.
+            </summary>
+            <param name="componentManager">The component manager.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ComponentDefinitionStore.Get(System.String,EPiServer.Shell.Services.Rest.ItemRange)">
+            <summary>
+            Lists the components that matches the given criteria.
+            </summary>
+            <param name="category">The category.</param>
+            <param name="range">Range http header on incoming requests.</param>
+            <returns>A result object which serializes the list of <see cref="T:EPiServer.Shell.ViewComposition.IComponent"/>.</returns>
+            <remarks>Parameters that are set to null/String.Empty will not be used for filtering.</remarks>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ComponentSortOrderStore.Put(EPiServer.Shell.UI.Models.ComponentSortOrderViewModel)">
+            <summary>
+            Save the order of the components in a container.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ComponentStore.Save(System.Collections.Generic.IEnumerable{EPiServer.Shell.UI.Models.ComponentViewModel})">
+            <summary>
+            Saves the specified components.
+            </summary>
+            <param name="components">The components to save.</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.DefaultMetadataStoreModelCreator">
+            <summary>
+            Default metadata store's model creator
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.DefaultMetadataStoreModelCreator.#ctor(EPiServer.Framework.Localization.LocalizationService,EPiServer.Shell.UIDescriptorRegistry,EPiServer.Shell.ObjectEditing.ISelectionFactory[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.DefaultMetadataStoreModelCreator"/> class.
+            </summary>
+            <param name="localizationService">The localization service.</param>
+            <param name="uiDescriptorRegistry">The UI descriptor registry.</param>
+            <param name="selectionFactories">The selection factories.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.DefaultMetadataStoreModelCreator.Create(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            Creates the metadata store model.
+            </summary>
+            <param name="metadata">The metadata.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.DefaultMetadataStoreModelCreator.CreateFromModelMetadata(EPiServer.Shell.ObjectEditing.ExtendedMetadata,EPiServer.Framework.Localization.LocalizationService,EPiServer.Shell.UIDescriptorRegistry,EPiServer.Shell.ObjectEditing.ISelectionFactory[],System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:EPiServer.Shell.UI.Models.MetadataStoreModel"/> instanse based on an instance of <see cref="T:EPiServer.Shell.UI.Models.MetadataStoreModel"/> model metadata.
+            </summary>
+            <param name="metadata">The metadata.</param>
+            <param name="localizationService">The localization service.</param>
+            <param name="uiDescriptorRegistry">The ui descriptor registry service.</param>
+            <param name="alwaysCreateChildProperties">if set to <c>true</c> always create child properties regardless the uiType.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.Internal.LicenseInformationStore">
+            <summary>
+            Rest store for license infomation
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.Internal.LicenseInformationStore.#ctor(EPiServer.Framework.Localization.LocalizationService,EPiServer.Framework.Configuration.IConfigurationSource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.Internal.LicenseInformationStore" /> class.
+            </summary>
+            <param name="localizationService">The localization service.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.Internal.LicenseInformationStore.Get(System.String)">
+            <summary>
+            Gets the license information for site.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.LicenseInformationStore">
+            <summary>
+            Obsoleted Rest store for license infomation. Not used any more.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.LicenseInformationStore.#ctor(EPiServer.Framework.Localization.LocalizationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.LicenseInformationStore" /> class.
+            </summary>
+            <param name="localizationService">The localization service.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.LicenseInformationStore.Get(System.String)">
+            <summary>
+            Gets the license information for site.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.MetadataStore.#ctor(EPiServer.Shell.ObjectEditing.ExtensibleMetadataProvider,EPiServer.Shell.UI.Rest.IMetadataStoreModelCreator,EPiServer.Framework.Serialization.IObjectSerializerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.MetadataStore" /> class.
+            </summary>
+            <param name="metadataProvider">The metadata provider.</param>
+            <param name="modelCreator">The store model creator.</param>
+            <param name="serializerFactory">The serializer factory.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.MetadataStore.Get(System.String,System.String)">
+            <summary>
+            Gets the metadata for a type or a specific object instance.
+            </summary>
+            <param name="id">The type of the object in string form.</param>
+            <param name="modelAccessor">A model accessor to be able to create a specific object in json format. For instance {pageId: 10}</param>
+            <returns>
+            Returns metadata for a type or a specific object instance.
+            </returns>
+            <remarks>The modelAccessor parameter will be used to invoke a model accessor in the <see cref="T:EPiServer.Shell.ObjectEditing.MetadataHandlerRegistry"/>.</remarks>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.ProfileStore">
+            <summary>
+            Provides store access to the profile repository for web clients.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ProfileStore.Get(System.String)">
+            <summary>
+            Gets or creates a profile object for the currently logged in user.
+            </summary>
+            <returns>The result object that serializes the profile object.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ProfileStore.Post(EPiServer.Shell.UI.Rest.ProfileSettingsData)">
+            <summary>
+            Stores the posted entity for the currently logged in user to the profile repository.
+            </summary>
+            <param name="entity">The entity to store.</param>
+            <returns>The profile id.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ProfileStore.Put(EPiServer.Shell.UI.Rest.ProfileSettingsData)">
+            <summary>
+            Stores the posted entity for the currently logged in user to the profile repository.
+            </summary>
+            <param name="entity">The entity to store.</param>
+            <returns>The profile id.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.ProfileStore.Delete(System.String)">
+            <summary>
+            Deelts the currently logged on user's profile.
+            </summary>
+            <returns>True</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.SearchProviderStore">
+            <summary>
+            Fetches the id:s for search providers for a given area.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SearchProviderStore.#ctor(EPiServer.Shell.Search.SearchProvidersManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.SearchProviderStore"/> class.
+            </summary>
+            <param name="manager">The search provider manager.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SearchProviderStore.Get(System.String)">
+            <summary>
+            Gets or creates a profile object for the currently logged in user.
+            </summary>
+            <returns>The result object that serializes the profile object.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SearchProviderStore.GetRouteArea">
+            <summary>
+            Get the current rout area
+            </summary>
+            <returns>Current Area if set, otherwise string.empty</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.SearchResultStore">
+            <summary>
+            Used to get search results for a given search provider.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SearchResultStore.#ctor(EPiServer.Shell.Search.SearchProvidersManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.SearchProviderStore" /> class.
+            </summary>
+            <param name="manager">The search provider manager.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SearchResultStore.Get(EPiServer.Shell.UI.Models.SearchResultModel,EPiServer.Shell.Services.Rest.ItemRange)">
+            <summary>
+            Gets the search results based on the specified search model.
+            </summary>
+            <param name="searchResultModel">The search result model.</param>
+            <param name="range">Range http header on incoming requests.</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.SelectionQueryStore">
+            <summary>
+            Used as a proxy to return query results for classes implementing <see cref="!:ICustomItemQuery"/>.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SelectionQueryStore.#ctor(System.Collections.Generic.IEnumerable{EPiServer.Shell.ObjectEditing.ISelectionQuery})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.SelectionQueryStore"/> class.
+            </summary>
+            <param name="queries">The queries.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.SelectionQueryStore.Get(System.String,System.String)">
+            <summary>
+            Gets the resuls for the specific query type and query.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The query.</param>
+            <returns>The query results.</returns>
+            <remarks>Will try and extract the last part of the path to the store as an identifier. This is used to return a single item for a given value.</remarks>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Rest.Translator">
+            <summary>
+            Handles translations for certain known items like component categories.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.Translator.#ctor(EPiServer.Framework.Localization.LocalizationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Rest.Translator"/> class.
+            </summary>
+            <param name="localizationService">The localization service.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Rest.Translator.TranslateCategory(System.String)">
+            <summary>
+            Helper method to resolve the translated name of a known category.
+            </summary>
+            <param name="category">The category.</param>
+            <returns>A translated name of a category.</returns>
+            <remarks>
+            <para>
+                The method will try to find a translation for a category. The format of the translation path must match "/episerver/components/categories/[category]
+            </para>
+            <para>
+            If no translation exist <paramref name="category"/> will be returned.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:EPiServer.Shell.UI.UIShellModule">
+            <summary>
+            Represents the overwritten ShellModule to add some more settings
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.UIShellModule.CreateViewModel(EPiServer.Shell.Modules.ModuleTable,EPiServer.Framework.Web.Resources.IClientResourceService)">
+            <summary>
+            Creates the view module for this module.
+            </summary>
+            <param name="moduleTable">The module table.</param>
+            <param name="clientResourceService">The client resource service.</param>
+            <returns>UIShellViewModel that will be serialized and sent to the client when initializing a view.</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.UIShellViewModel">
+            <summary>
+            Represents the Settings for ShellModule
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.UIShellViewModel.EnableWebSockets">
+            <summary>
+            A configuration option controlling whether the client tries to open a web socket connection to the server
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.UIShellViewModel.PreviewTimeout">
+            <summary>
+            A configuration option that handles for how long the preview should wait for content to load before showing an error screen.
+            </summary>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Views.Shared.Wrappers.ControlWrapper.Head1">
+            <summary>
+            Head1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:EPiServer.Shell.UI.Views.Shared.Wrappers.ControlWrapper.placeHolderControl">
+            <summary>
+            placeHolderControl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Mvc.Html.ScriptExtensions">
+            <summary>
+            Extension methods for generating script tags based on module script resources
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Mvc.Html.ScriptExtensions.ModuleScripts(System.Web.Mvc.HtmlHelper,System.Collections.Generic.IEnumerable{EPiServer.Shell.Modules.ModuleViewModel})">
+            <summary>
+            Returns a collection of <see cref="T:System.Web.Mvc.TagBuilder"/> instances for the module script dependencies
+            </summary>
+            <param name="htmlHelper">The html helper</param>
+            <param name="modules">A collection of modules to get script tags for</param>
+            <returns>A <see cref="T:EPiServer.Shell.Web.Mvc.TagBuilderCollection"/> with tag builders for the module script resources</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageBase">
+            <summary>
+            Definition of a client resource package
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageBase"/> class.
+            </summary>
+            <param name="name">The name of the package.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageBase.Name">
+            <summary>
+            Gets the package name
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageBase.Files">
+            <summary>
+            Gets the resource files in the package
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader">
+            <summary>
+            Returns script and styles included in the package file
+            </summary>
+            <remarks>Use in Shell to handle both compressed and combined client resources as well as including them separatly for debug purposes</remarks>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance
+            </summary>
+            <param name="packageFile">The path to the packaging XML file</param>
+            <param name="basePath">The path that will be used a prefix for the relative paths found in the packaging file</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.#ctor(System.String,System.String,EPiServer.ServiceLocation.IServiceLocator)">
+            <summary>
+            Initializes a new instance
+            </summary>
+            <param name="packageFile">The path to the packaging XML file</param>
+            <param name="basePath">The path that will be used a prefix for the relative paths found in the packaging file</param>
+            <param name="serviceLocator">Service locator for virtual path provider and configuration</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.IsDebug">
+            <summary>
+            Determine if the resource package is running in debug mode
+            </summary>
+            <value><c>true</c> if debug; otherwise, <c>false</c>.</value>
+            <remarks>
+            	<para>This value is controlled in web.config with &lt;clientResources debug="true"&gt; under the episerver.shell section</para>
+            	<para>Debug means that instead of rendering the packaged files it will render the actual included files as defined in the package</para>
+            </remarks>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.Packages">
+            <summary>
+            Lists all the packages withing the package file
+            </summary>
+            <returns>A list of all packages inside the package file</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.GetResourceFiles(EPiServer.Shell.UI.Web.Resources.ScriptResourcePackage)">
+            <summary>
+            Gets the resource files within the specified package
+            </summary>
+            <param name="package">The package that contains the files.</param>
+            <returns>A list of all files within the package</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.GetResourceFiles(EPiServer.Shell.UI.Web.Resources.StyleResourcePackage)">
+            <summary>
+            Gets the resource files within the specified package
+            </summary>
+            <param name="package">The package that contains the files.</param>
+            <returns>A list of all files within the package</returns>
+            <remarks>Will use the overlay -rtl if the language is a Right to left language</remarks>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ClientResourcePackageLoader.GetResourceFiles(EPiServer.Shell.UI.Web.Resources.StyleResourcePackage,System.String)">
+            <summary>
+            Gets the resource files within the specified package
+            </summary>
+            <param name="package">The package that contains the files.</param>
+            <param name="overlays">The overlays to be appened to the file.</param>
+            <returns>A list of all files within the package</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceLoader">
+            <summary>
+            Returns legacy styles included in EPiServer.Shell
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceLoader.#ctor(System.String)">
+            <summary>
+            Initializes a new instance
+            </summary>
+            <param name="basePath">The path that will be used to search for legacy resources</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceLoader.#ctor(System.String,System.Web.Hosting.VirtualPathProvider)">
+            <summary>
+            Initializes a new instance
+            </summary>
+            <param name="basePath">The path that will be used to search for legacy resources</param>
+            /// <param name="provider">Virtual path provider used to load files from the base path</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceLoader.GetResourceFiles">
+            <summary>
+            Gets the resource files within the specified package
+            </summary>
+            <returns>A list of all files within the package</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceProvider">
+            <summary>
+            Client Resource provider that gets all resources under /ClientResources/EPi/themes/legacy/
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceProvider.#ctor(EPiServer.Shell.Modules.ModuleTable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceProvider"/> class.
+            </summary>
+            <param name="basePath">The base path to legacy resources.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.LegacyShellClientResourceProvider.GetClientResources">
+            <inheritdoc />
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.ModuleDependencySorter">
+            <summary>
+            Sorts module dependencies and selects the ones required for application startup
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ModuleDependencySorter.GetStartupModules(System.Collections.Generic.IEnumerable{EPiServer.Shell.Modules.ModuleViewModel},System.String)">
+            <summary>
+            Gets a collection sorted in dependency order with modules required to start the application. 
+            </summary>
+            <remarks>
+            If no startup module is supplied then all modules are returned in dependency order.
+            </remarks>
+            <param name="modules">A collection of registered modules</param>
+            <param name="startupModule">The application startup modules</param>
+            <returns>A collection of modules sorted in dependency order</returns>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ModuleDependencySorter.GetDependenciesForModule(System.Collections.Generic.IDictionary{System.String,EPiServer.Shell.UI.Web.Resources.ModuleDependencySorter.EquatableModuleViewModelWrapper},EPiServer.Shell.UI.Web.Resources.ModuleDependencySorter.EquatableModuleViewModelWrapper)">
+            <summary>
+            Gets a collection of dependencies for a module
+            </summary>
+            <param name="moduleLookup">A lookup dictionary with module name as the key</param>
+            <param name="module">The module to get dependencies for</param>
+            <returns>A collection of modules</returns>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.ModuleDependencySorter.EquatableModuleViewModelWrapper">
+            <summary>
+            Helper class required for dependency sorter since the ModuleViewModel doesn't override Equals and GetHashCode
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.ScriptResourcePackage">
+            <summary>
+            Script Resource Package
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ScriptResourcePackage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.ScriptResourcePackage"/> class.
+            </summary>
+            <param name="name">The name of the package.</param>
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.ShellPackageClientResourceProvider">
+            <summary>
+            Client Resource providet that get all resources defined in the package.config
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ShellPackageClientResourceProvider.#ctor(EPiServer.Shell.Modules.ModuleTable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.ShellPackageClientResourceProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ShellPackageClientResourceProvider.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.ShellPackageClientResourceProvider"/> class.
+            </summary>
+            <param name="packageFile"></param>
+            <param name="basePath">The base path.</param>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.ShellPackageClientResourceProvider.GetClientResources">
+            <inheritdoc />
+        </member>
+        <member name="T:EPiServer.Shell.UI.Web.Resources.StyleResourcePackage">
+            <summary>
+            Style Resource Package
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.UI.Web.Resources.StyleResourcePackage.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.UI.Web.Resources.StyleResourcePackage"/> class.
+            </summary>
+            <param name="name">Package name.</param>
+            <param name="overlays">The overlay that the package support.</param>
+        </member>
+        <member name="P:EPiServer.Shell.UI.Web.Resources.StyleResourcePackage.Overlays">
+             <summary>
+             Get the overlays that the package support
+             </summary>
+            <example>-rtl</example>
+        </member>
+        <member name="T:EPiServer.Shell.ModelBinder.ShellModuleBinder">
+            <summary>
+            Model vinder for ShellModule
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.ModelBinder.ShellModuleBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+            <summary>
+            Looks for a <see cref="T:EPiServer.Shell.Modules.ShellModule"/> in routeData.DataTokens["module"]
+            </summary>
+            <param name="controllerContext">The controller context</param>
+            <param name="bindingContext">The binding context</param>
+            <returns>The <see cref="T:EPiServer.Shell.Modules.ShellModule"/> if it exists, otherwise false.</returns>
+        </member>
+        <member name="T:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute">
+            <summary>
+            Used to create a drop down list to make the editor able to select one of a list of values defined by the given selection factory.
+            </summary>
+        </member>
+        <member name="P:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute.ModuleTable">
+            <summary>
+            Injected module table for easier unit testing
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute"/> class.
+            </summary>
+            <param name="selectionFactoryType">Type of the selection factory.</param>
+            <exception cref="T:System.ArgumentException">SelectionFactoryType needs to implement ICustomItemQuery.</exception>
+        </member>
+        <member name="M:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute.OnMetadataCreated(System.Web.Mvc.ModelMetadata)">
+            <summary>
+            When implemented in a class, provides metadata to the model metadata creation process.
+            </summary>
+            <param name="metadata">The model metadata.</param>
+        </member>
+        <member name="P:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute.SelectionFactoryType">
+            <summary>
+            Gets or sets the type of the selection factory.
+            </summary>
+            <value>
+            The type of the selection factory.
+            </value>
+        </member>
+        <member name="P:EPiServer.Shell.ObjectEditing.AutoSuggestSelectionAttribute.AllowCustomValues">
+            <summary>
+            Defines if the editor can enter other values than the suggested.
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.ObjectEditing.ISelectionQuery">
+            <summary>
+            Used to query for items, for instance in an auto suggesting selection widget.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.ObjectEditing.ISelectionQuery.GetItemByValue(System.String)">
+            <summary>
+            Gets the item by a given value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>Either the item or null.</returns>
+        </member>
+        <member name="M:EPiServer.Shell.ObjectEditing.ISelectionQuery.GetItems(System.String)">
+            <summary>
+            Gets the items for the given query.
+            </summary>
+            <param name="query">The query.</param>
+            <returns>The query results.</returns>
+        </member>
+        <member name="T:EPiServer.Shell.RouteInitialization">
+            <summary>
+            Initialization module registering additional routes
+            </summary>
+        </member>
+        <member name="T:EPiServer.Shell.Messaging.Internal.PushMessageRoute">
+            <summary>
+            A simple route returning a <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageRouteHandler"/> for the path supplied to the constructor.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.Messaging.Internal.PushMessageRoute.GetRouteData(System.Web.HttpContextBase)">
+            <summary>
+            Returns a <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageRouteHandler"/> if the request path matches the confgured socket path
+            </summary>
+            <param name="requestContext">The context of the executed request</param>
+            <returns>A new instance of <see cref="T:EPiServer.Shell.UI.Messaging.Internal.PushMessageRouteHandler"/></returns>
+        </member>
+        <member name="M:EPiServer.Shell.Messaging.Internal.PushMessageRoute.GetVirtualPath(System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary)">
+            <summary>
+            This implementation always returns null
+            </summary>
+            <param name="requestContext">The context of the executed request</param>
+            <param name="values">Additional route data</param>
+            <returns><c>null</c></returns>
+        </member>
+        <member name="T:EPiServer.Shell.Web.Mvc.TagBuilderCollection">
+            <summary>
+            Helper class for rendering a collection of <see cref="T:System.Web.Mvc.TagBuilder"/> instances in a view 
+            by contatenating the result from the ToString() method of each TagBuilder in the collection.
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.Web.Mvc.TagBuilderCollection.#ctor">
+            <summary>
+            Instantiates an empty collection
+            </summary>
+        </member>
+        <member name="M:EPiServer.Shell.Web.Mvc.TagBuilderCollection.#ctor(System.Collections.Generic.IEnumerable{System.Web.Mvc.TagBuilder})">
+            <summary>
+            Initializes a new instance of the TagBuilderCollection class containing 
+            elements copied from the specified collection and has sufficient
+            capacity to accommodate the number of elements copied.
+            </summary>
+            <param name="collection">The collection with initial items</param>
+        </member>
+        <member name="M:EPiServer.Shell.Web.Mvc.TagBuilderCollection.ToString">
+            <summary>
+            Returns a concatenated string representation of the <see cref="T:System.Web.Mvc.TagBuilder"/>s in the collection.
+            The tags a rendered with <see cref="F:System.Web.Mvc.TagRenderMode.Normal"/>
+            </summary>
+            <param name="tagRenderMode">The mode in which to render the tags</param>
+            <returns>A string representation of the tags in the collection</returns>
+        </member>
+        <member name="M:EPiServer.Shell.Web.Mvc.TagBuilderCollection.ToString(System.Web.Mvc.TagRenderMode)">
+            <summary>
+            Returns a concatenated string representation of the <see cref="T:System.Web.Mvc.TagBuilder"/>s 
+            in the collection using the specified <see cref="T:System.Web.Mvc.TagRenderMode"/>
+            </summary>
+            <param name="tagRenderMode">The mode in which to render the tags</param>
+            <returns>A string representation of the tags in the collection</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1 @@
+﻿2023-03-01 10:33:49,994 [11] ERROR EPiServer.Personalization.MaxMindGeolocationProvider: Unable to find a geolocation database at the configured location 'App_Data\GeoLite2\GeoLite2-City.mmdb'. Some geolocation capabilities will be disabled.
