@@ -374,3 +374,7 @@ C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\obj\Debug\AlloyDemo.csproj.CoreCompil
 C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\obj\Debug\AlloyDemo.csproj.CopyComplete
 C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\obj\Debug\AlloyDemo.dll
 C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\obj\Debug\AlloyDemo.pdb
+C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\bin\System.Net.Http.Json.dll
+C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\bin\System.Text.Json.dll
+C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\bin\System.Net.Http.Json.xml
+C:\projects\JH-EpiWork\AlloyDemo\AlloyDemo\bin\System.Text.Json.xml

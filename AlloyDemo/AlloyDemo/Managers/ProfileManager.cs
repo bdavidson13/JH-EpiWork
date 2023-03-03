@@ -1,4 +1,5 @@
-﻿using AlloyDemo.IdProviders;
+﻿using AlloyDemo.Features.Loaders;
+using AlloyDemo.IdProviders;
 using AlloyDemo.Profiles;
 using AlloyDemo.Stores;
 using DeaneBarker.Optimizely.ProfileVisitorGroups.TestingCode;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 
 namespace AlloyDemo.Managers
 {
@@ -15,6 +17,7 @@ namespace AlloyDemo.Managers
         public static List<Action<IProfile>> ProfileLoaders { get; set; } = new List<Action<IProfile>>();
         private readonly IProfileStore _store;
         private readonly IIdProvider _idProvider;
+        private HttpContextBase context;
 
         //public ProfileManager(IProfileStore store, IIdProvider idProvider, IOptions<ProfileManagerOptions> options)
         //{
@@ -22,16 +25,25 @@ namespace AlloyDemo.Managers
         //    _idProvider = idProvider;
         //    ProfileLoaders.AddRange(options.Value.ProfileLoaders);
         //}
-        public ProfileManager(IProfileStore store, IIdProvider idProvider)
+        public ProfileManager(IProfileStore store, IIdProvider idProvider,HttpContextBase context = null)
         {
             _store = store;
             _idProvider = idProvider;
 
-            ProfileLoaders.Add(SampleLoaders.PopulateProfileFromExternalSource_One);
+            if (context != null && idProvider.GetType() == typeof(CookieIdProvider))
+            {
+                _idProvider.SetContext(context);
+            }
+            ApiLoader apiLoader = new ApiLoader();
+            ProfileLoaders.Add(apiLoader.LoadJson);
         }
         public IProfile Load(string id)
         {
             return _store.Get(id);
+        }
+        public void setHttpContext(HttpContextBase currentContext)
+        {
+            context = currentContext;
         }
 
         public virtual IProfile LoadForCurrentUser()

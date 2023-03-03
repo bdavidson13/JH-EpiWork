@@ -10,6 +10,10 @@ using AlloyDemo.Features.RegisterPersonas;
 using AlloyDemo.Features.ResetAdmin;
 using StructureMap;
 using StructureMap.Pipeline;
+using AlloyDemo.Managers;
+using AlloyDemo.Stores;
+using AlloyDemo.Profiles;
+using AlloyDemo.IdProviders;
 
 [assembly: OwinStartup(typeof(AlloyDemo.Startup))]
 
@@ -19,20 +23,26 @@ namespace AlloyDemo
     {
         public MyRegistry()
         {
+            //For<ISample>().Use<Sample>().ContainerScoped();
+            
             For<Microsoft.AspNetCore.Http.IHttpContextAccessor>().Use<Microsoft.AspNetCore.Http.HttpContextAccessor>().ContainerScoped();
 
-            services.AddSingleton<IProfileManager, ProfileManager>();
-            services.AddSingleton<IProfileStore, ProfileStore>();
-            services.AddTransient<IProfile, DictionaryProfile>();
+            //For<IProfileStore>().Use<ProfileStore>().ContainerScoped();
+            //For<IProfile>().Use<DictionaryProfile>().ContainerScoped();
+            //For<IIdProvider>().Use<CookieIdProvider>().ContainerScoped();
+            //For<IProfileManager>().Use<ProfileManager>().ContainerScoped();
+            //For<ProfileManagerOptions>();
+            //For<CookieIdProviderOptions>();
 
-            if (options != null)
-            {
-                services.Configure<ProfileManagerOptions>(options);
-            }
 
-            services.AddCookieIdProvider();
+            //if (options != null)
+            //{
+            //    services.Configure<ProfileManagerOptions>(options);
+            //}
 
-            return services;
+            //services.AddCookieIdProvider();
+
+            //return services;
         }
     }
     public class Startup
@@ -44,7 +54,6 @@ namespace AlloyDemo
             {
                 x.AddRegistry<MyRegistry>();
             });
-            StartupExtensions.AddProfileVisitorGroups()
             // Add CMS integration for ASP.NET Identity
             app.AddCmsAspNetIdentity<ApplicationUser>();
 

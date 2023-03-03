@@ -11,6 +11,8 @@ using AlloyDemo.Profiles;
 using AlloyDemo.IdProviders;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using System.Web;
+
 namespace AlloyDemo.Business.Initialization
 {
     [InitializableModule]
@@ -30,7 +32,6 @@ namespace AlloyDemo.Business.Initialization
                 context.Services.AddSingleton<IProfileStore, ProfileStore>();
                 context.Services.AddTransient<IProfile, DictionaryProfile>();
                 context.Services.AddTransient<IIdProvider, CookieIdProvider>();
-
             };
         }
 
